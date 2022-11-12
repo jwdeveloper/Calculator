@@ -54,7 +54,7 @@ Vue.component('inputbox', {
     },
     data: function () {
         return {
-            input: '5+10',
+            input: '5+sin(cos(2+x),5)',
             input2: '1*x+(2-PI)/sin(5+(10-1))',
             output: 0,
             intervalId: 0,

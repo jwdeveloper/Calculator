@@ -1,15 +1,15 @@
 Calculator =
 {
     calculate: function (input, options) {
-        var syntaxTree = getSyntaxTree(input);
+        var syntaxTree = createSyntaxTree(input);
         console.log(syntaxTree)
         console.log('=============================================')
         return calculateTreeValue(syntaxTree, options);
     },
     calculateChart: function (input, options) {
-        var syntaxTree = getSyntaxTree(input);
+        var syntaxTree = createSyntaxTree(input);
         var result = []
-        for (var i = options.from; i <= options.to; i+=options.step) {
+        for (var i = options.from; i <= options.to; i += options.step) {
             var varable = {
                 name: options.name,
                 value: i
@@ -25,6 +25,7 @@ Calculator =
     },
     Symbols: ['+', '-', '*', '/', '^', '(', ')'],
     Functions: ['sin', 'cos', 'min', 'max'],
+    ArgumentSeparator: ',',
     NumberSeparator: '.',
     Numbers: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.']
 }

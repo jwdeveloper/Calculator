@@ -15,7 +15,7 @@ Vue.component('constants', {
     },
     template: `
     <div class="constants">
-    <small class="title">add value</small>
+    <small class="title">Add value</small>
     <br>
     <constantsForm></constantsForm>
     <br>

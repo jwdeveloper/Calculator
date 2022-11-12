@@ -1,27 +1,66 @@
 
 
 
-class Note {
-    constructor(name = '', operation = null) {
-        this.name = name;
-        this.left = null;
-        this.right = null;
-        this.operation = operation;
-    }
 
-    getValue() {
-        return 0;
-    }
-
-
+function createSyntaxTree(input)
+{
+    var elements = parseToElements(input);
+    var tree = create(elements)
+    return tree;
 }
+
+
+
+function create(elements, index =0 , name = 'root')
+{
+    console.log('hallo?')
+    var note= new Node(name);
+    for (var i = index; i < elements.length; i++)
+    {
+        console.log('c')
+        var element = elements[i];
+        if(element.getType() != 'operation' && note.left == null)
+        {
+            if(element.hasElements())
+            {
+                note.left = create(element.elements,i,'left-el'+1)
+            }
+            else
+            {
+                note.left = element;
+            }
+        
+            continue;
+        }
+        if(element.getType() == 'operation' && note.operation == null)
+        {
+            note.operation = element;
+            continue;
+        }
+       
+       
+        if(element.hasElements())
+        {
+            console.log(element.elements)
+            note.right = create(element.elements,i,element.metatype)
+        }
+        else
+        {
+            note.right = create(elements,i,'right'+1)
+        }
+    }
+    return note;
+}
+
+
+
 
 
 function elementsToTree(elements) {
 
     var resolved = elementsResolver(elements);
     console.log('resolved', resolved)
-    var note= new Note('Root');
+    var note= new Node('Root');
     var lastNote = null;
     for (var i = 0; i < resolved.length; i++)
     {
