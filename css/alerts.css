@@ -1,0 +1,22 @@
+.alerts-container 
+{
+  margin-top: 1em;
+  background-color: transparent;
+  color: #e1e8ed;
+  z-index: 4;
+  position: absolute;
+  float: left;
+  padding-left: 90%;
+  pointer-events: none;
+}
+.alert
+{
+  animation-name: example;
+  animation-duration: 0.75s;
+}
+
+@keyframes example {
+  0%  { left:200px; top:0px;}
+  70%   {left:-10px; top:0px;}
+  100%   {left:0px; top:0px;}
+}

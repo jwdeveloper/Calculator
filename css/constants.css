@@ -1,0 +1,33 @@
+.constants-form
+{
+    margin-top: 0.5em;
+    display: flex; 
+    column-gap: 20px;
+    height: 4em;
+}
+
+.constants-input
+{
+    width: 8em;
+}
+.title
+{
+    color: rgb(255, 255, 255);
+}
+
+.constants-form-btn
+{
+    width: 7em;
+}
+
+.constants-list-item
+{
+    column-gap: 20px; 
+ 
+}
+
+
+.constants
+{
+    padding: 0.5em;
+}

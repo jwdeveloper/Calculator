@@ -1,0 +1,60 @@
+html * {
+  font-size: 1em;
+  font-family: 'Minecraft', sans-serif;
+}
+
+label
+{
+  color: #555555;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+body {
+  background: #c3d3d3;
+}
+
+.btn-success {
+  border-color: #12465a;
+  background-color: #12465a;
+  color: #e1e8ed;
+}
+
+.btn-success:focus {
+  background-color: #12465a;
+}
+
+.btn-success:hover {
+  background-color: #206c8a;
+  color: #e1e8ed;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #206c8a;
+  border-radius: 10px;
+}
+
+.container {
+  background-color: #92c4d8;
+  border-radius: 1em;
+  margin-top:10%;
+  margin-bottom: 10%;
+  filter: drop-shadow(5px 5px 1px #215366);
+}
+
+
+

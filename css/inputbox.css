@@ -1,0 +1,63 @@
+.input-container
+{
+    padding: 1em;
+}
+
+.form-control
+{
+    color: #051e63; 
+}
+
+.input-box
+{
+    height: 3em;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+}
+
+.output-div
+{
+    margin-left: auto;
+}
+
+.equal-div
+{
+    position: relative;
+}
+
+.equal
+{
+    font-size: 5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.shake {
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  }
+  
+  @keyframes shake {
+    10%,
+    90% {
+      transform: translate(-30%, -50%);
+    }
+  
+    20%,
+    80% {
+        transform: translate(-20%, -50%);
+    }
+  
+    30%,
+    50%,
+    70% {
+        transform: translate(-20%, -50%);
+    }
+  
+    40%,
+    60% {
+        transform: translate(-50%, -50%);
+    }
+  }
